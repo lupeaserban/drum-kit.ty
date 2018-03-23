@@ -1,8 +1,9 @@
 html {
   font-size: 10px;
-  background: url("img/IMG_0802.jpg") bottom center;
+  background: url("/img/img.JPG") bottom center;
   background-size: cover;
 }
+
 body,html {
   margin: 0;
   padding: 0;
