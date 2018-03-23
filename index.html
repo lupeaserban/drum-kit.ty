@@ -80,9 +80,8 @@
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
   window.addEventListener('keydown', playSound);
-  window.addEventListener('click', playSound);
 
-  // drum kit button  NOT WORKING YET!!!!!!!!
+  // drum kit button
   const button= document.querySelector('h1');
   function playCat(e){
     const audioCat= document.getElementById('cat');
