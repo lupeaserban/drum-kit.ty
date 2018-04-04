@@ -1,5 +1,4 @@
-
-  function playSound(e){
+function playSound(e){
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if(!audio) return; //stop the function from running
@@ -8,19 +7,19 @@
     key.classList.add('playing');
   }
 
-  function removeTransition(e){
+function removeTransition(e){
     if(e.propertyName !== 'transform')return; //skip if its not a transform
     this.classList.remove('playing')
   }
 
-  const keys = document.querySelectorAll('.key')
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+const keys = document.querySelectorAll('.key')
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-  window.addEventListener('keydown', playSound);
+window.addEventListener('keydown', playSound);
 
-  // drum kit button
-  const button= document.querySelector('h1');
-  function playCat(e){
+// drum kit.ty button
+const button= document.querySelector('h1');
+function playCat(e){
     const audioCat= document.getElementById('cat');
     if(!audioCat) return;
     audioCat.currentTime=0;
@@ -28,5 +27,5 @@
     button.classList.add('playing');
   }
 
-  button.addEventListener('transitionend', removeTransition);
-  button.addEventListener('click', playCat);
+button.addEventListener('transitionend', removeTransition);
+button.addEventListener('click', playCat);
